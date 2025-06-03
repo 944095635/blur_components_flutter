@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 /* 毛玻璃的颜色 黑夜 */
-const Color glassDarkColor = Color(0xAA0E1327);
+const Color glassDarkColor = Color.fromARGB(120, 0, 0, 0);
 
 /* 毛玻璃的颜色 */
-const Color glassColor = Color.fromARGB(150, 255, 255, 255);
+const Color glassColor = Color.fromARGB(100, 255, 255, 255);
 
 ValueNotifier<ThemeMode> themeModeNotifier = ValueNotifier(ThemeMode.light);
 
@@ -34,6 +34,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       themeMode: themeModeNotifier.value,
       theme: ThemeData(
         colorScheme: ColorScheme.light(),

@@ -23,12 +23,8 @@ class _FramePageState extends State<FramePage> {
     return Scaffold(
       body: pages[pageIndex],
       extendBody: true,
-      // 底部的高度是 75.h ,完整高度 90.h
       bottomNavigationBar: BlurWidget(
-        child: DecoratedBox(
-          decoration: BoxDecoration(color: Color(0x440E1327)),
-          child: _buildMenus(themeData),
-        ),
+        child: _buildMenus(themeData),
       ),
     );
   }
